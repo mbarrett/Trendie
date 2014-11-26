@@ -8,3 +8,5 @@ Written in <a href="http://nancyfx.org/">Nancy FX</a> using the <a href="https:/
 Frontend theme via <a href="http://getbootstrap.com/">Bootstrap</a>.
 
 Deployment shout to <a href="https://appharbor.com/">AppHarbor</a>.
+
+<a href="http://trendie.apphb.com">http://trendie.apphb.com</a>
