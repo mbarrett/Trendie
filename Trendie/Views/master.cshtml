@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>@ViewBag["Title"]</title>
+
+	<!-- CSS -->
+	<!-- Bootstrap core CSS -->
+	<link href="content/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+	<!-- Simple text rotator -->
+	<link href="content/assets/css/simpletextrotator.css" rel="stylesheet">
+
+	<!-- Font Awesome CSS -->
+	<link href="content/assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
+
+	<!-- Animate css -->
+	<link href="content/assets/css/animate.css" rel="stylesheet">
+
+	<!-- Custom styles CSS -->
+	<link href="content/assets/css/style.css" rel="stylesheet" media="screen">
+
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<!-- Preloader -->
+
+		<div id="preloader">
+			<div id="status">
+				<div class="status-mes"><h4>Loading</h4></div>
+			</div>
+		</div>
+        
+        @RenderBody()
+		
+	    <!-- Footer start -->
+
+		<footer id="footer">
+
+			<div class="container">
+
+				<div class="row">
+
+					<div class="col-md-12">
+						<p class="copy">
+							© 2014 All Rights Reserved.
+						</p>
+					</div>
+
+				</div><!-- .row -->
+
+			</div><!-- .container -->
+
+		</footer>
+
+		<!-- Footer end -->
+
+	</div><!-- .wrapper -->
+
+	<!-- Javascript files -->
+	<script src="content/assets/js/jquery-1.11.0.min.js"></script>
+	<script src="content/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="content/assets/js/jquery.backstretch.min.js"></script>
+    <script src="content/assets/js/jquery.simple-text-rotator.min.js"></script>
+	<script src="content/assets/js/wow.min.js"></script>
+	<script src="content/assets/js/smoothscroll.js"></script>
+	<script src="content/assets/js/custom.js"></script>
+    <script src="content/assets/js/custom.preloader.js"></script>
+    
+    <script type="text/javascript">
+        TRENDIE.CUSTOM.PreLoader.init();
+    </script>
+
+</body>
+</html>
