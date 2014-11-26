@@ -1,7 +1,7 @@
 ﻿using TweetSharp;
 using Trendie.Core.Cache;
 using Trendie.Core.Extensions;
-using Trendie.Core.ServiceAgent;
+using Trendie.Core.ServiceAgents;
 
 namespace Trendie.Core.Repositories
 {

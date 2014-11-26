@@ -1,6 +1,6 @@
 ﻿using TweetSharp;
 
-namespace Trendie.Core.ServiceAgent
+namespace Trendie.Core.ServiceAgents
 {
     public interface ITweetSharpServiceAgent
     {
