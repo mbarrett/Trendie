@@ -78,9 +78,9 @@
         {
             <div class="container">
                 <blockquote>
-                    <img src="@Html.Raw(tweet.TweetPicture)" />
-                    <p>@Html.Raw(tweet.TweetStatus)</p>
-                    <footer><cite title="@Html.Raw(string.Format("@{0}", tweet.TweetAuthor))">@Html.Raw(string.Format("@{0}", tweet.TweetAuthor))</cite>. @Html.Raw(tweet.TweetClient)</footer>
+                    <img src="@Html.Raw(tweet.ProfileImageUrl)" />
+                    <p>@Html.Raw(tweet.Status)</p>
+                    <footer><cite title="@Html.Raw(string.Format("@{0}", tweet.Author))">@Html.Raw(string.Format("@{0}", tweet.Author))</cite>. @Html.Raw(tweet.Client). @Html.Raw(tweet.CreatedDate.ToString())</footer>
                 </blockquote>
             </div>
         }

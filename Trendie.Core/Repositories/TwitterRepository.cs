@@ -3,10 +3,11 @@ using Trendie.Core.Cache;
 using Trendie.Core.Extensions;
 using Trendie.Core.ServiceAgent;
 
-namespace Trendie.Core.Repository
+namespace Trendie.Core.Repositories
 {
     public class TwitterRepository : ITwitterRepository
     {
+        public const int CacheExpiry5Minutes = 5;
         public const int CacheExpiry15Minutes = 15;
 
         private readonly IWebCache _webCache;
@@ -31,8 +32,8 @@ namespace Trendie.Core.Repository
         {
             var cacheKey = string.Format("tweets_{0}", trend.Query);
             return _webCache.Get(cacheKey, 
-                                    () => 
-                                    _tweetSharpServiceAgent.Search(trend.Query), CacheExpiry15Minutes);
+                                    () =>
+                                    _tweetSharpServiceAgent.Search(trend.Query), CacheExpiry5Minutes);
         }
     }
 }

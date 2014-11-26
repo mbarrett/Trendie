@@ -1,6 +1,6 @@
 ﻿using TweetSharp;
 
-namespace Trendie.Core.Repository
+namespace Trendie.Core.Repositories
 {
     public interface ITwitterRepository
     {

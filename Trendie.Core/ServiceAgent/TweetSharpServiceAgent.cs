@@ -28,7 +28,7 @@ namespace Trendie.Core.ServiceAgent
 
             return _service.Search(new SearchOptions
                 {
-                    Resulttype = TwitterSearchResultType.Popular,
+                    Resulttype = TwitterSearchResultType.Recent,
                     Q = query,
                     Count = 10,
                     IncludeEntities = false

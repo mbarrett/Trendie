@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Trendie.Core.Repositories;
 using TweetSharp;
 using Trendie.Core.Extensions;
 using Trendie.Core.Models;
-using Trendie.Core.Repository;
 
 namespace Trendie.Core.Builders
 {
@@ -38,10 +38,11 @@ namespace Trendie.Core.Builders
         {
             return top10Tweets.Statuses.Select(tweet => new TweetResult
                 {
-                    TweetStatus = tweet.TextAsHtml,
-                    TweetAuthor = tweet.Author.ScreenName,
-                    TweetClient = tweet.Source,
-                    TweetPicture = tweet.Author.ProfileImageUrl
+                    Status = tweet.TextAsHtml,
+                    Author = tweet.Author.ScreenName,
+                    Client = tweet.Source,
+                    ProfileImageUrl = tweet.Author.ProfileImageUrl,
+                    CreatedDate = tweet.CreatedDate
                 }).ToList();
         }
     }

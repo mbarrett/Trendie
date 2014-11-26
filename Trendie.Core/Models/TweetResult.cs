@@ -1,10 +1,13 @@
-﻿namespace Trendie.Core.Models
+﻿using System;
+
+namespace Trendie.Core.Models
 {
     public class TweetResult
     {
-        public string TweetStatus { get; set; }
-        public string TweetAuthor { get; set; }
-        public string TweetClient { get; set; }
-        public string TweetPicture { get; set; }
+        public string Status { get; set; }
+        public string Author { get; set; }
+        public string Client { get; set; }
+        public string ProfileImageUrl { get; set; }
+        public DateTime CreatedDate { get; set; }
     }
 }

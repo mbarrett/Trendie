@@ -71,8 +71,8 @@
     <Compile Include="Models\TweetResult.cs" />
     <Compile Include="Models\ViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\ITwitterRepository.cs" />
-    <Compile Include="Repository\TwitterRepository.cs" />
+    <Compile Include="Repositories\ITwitterRepository.cs" />
+    <Compile Include="Repositories\TwitterRepository.cs" />
     <Compile Include="ServiceAgent\ITweetSharpServiceAgent.cs" />
     <Compile Include="ServiceAgent\TweetSharpServiceAgent.cs" />
   </ItemGroup>
