@@ -17,8 +17,7 @@ namespace Trendie.Core.ServiceAgents
 
             return _service.ListLocalTrendsFor(new ListLocalTrendsForOptions
                 {
-                    Id = id,
-                    Exclude = "hashtags"
+                    Id = id
                 });
         }
 

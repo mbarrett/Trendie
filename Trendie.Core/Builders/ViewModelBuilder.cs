@@ -18,13 +18,15 @@ namespace Trendie.Core.Builders
 
         public ViewModel Build(string country)
         {
-            var trendResults = new Dictionary<string, List<TweetResult>>();
+            var trendResults = new Dictionary<Trend, List<TweetResult>>();
             var top5Trends = _twitterRepository.GetTopTrendsFor(country).Take(5);
 
             foreach (var trend in top5Trends)
             {
+                var twitterTrend = new Trend {Name = trend.Name, LinkedName = trend.Name.ToSafeString()};
                 var top10Tweets = _twitterRepository.GetTweetsFor(trend);
-                trendResults.Add(trend.Name, MapTweetFields(top10Tweets));
+
+                trendResults.Add(twitterTrend, MapTweetFields(top10Tweets));
             }
 
             return new ViewModel
@@ -45,5 +47,11 @@ namespace Trendie.Core.Builders
                     CreatedDate = tweet.CreatedDate
                 }).ToList();
         }
+    }
+
+    public class Trend
+    {
+        public string Name { get; set; }
+        public string LinkedName { get; set; }
     }
 }

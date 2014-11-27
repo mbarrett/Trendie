@@ -68,6 +68,7 @@
     <Compile Include="Cache\IWebCache.cs" />
     <Compile Include="Cache\WebCache.cs" />
     <Compile Include="Extensions\CountryExtensions.cs" />
+    <Compile Include="Extensions\TweetExtensions.cs" />
     <Compile Include="Models\TweetResult.cs" />
     <Compile Include="Models\ViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

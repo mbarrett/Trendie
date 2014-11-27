@@ -25,7 +25,7 @@
             <ul class="nav navbar-nav navbar-right">
                 @foreach (dynamic trend in Model.TrendResults)
                 {
-                    <li><a href="#@trend.Key.ToString().Replace(" ", "")">@trend.Key</a></li>
+                    <li><a href="#@trend.Key.LinkedName">@trend.Key.Name</a></li>
                 }
             </ul>
         </div>
@@ -60,14 +60,14 @@
         
 @foreach (dynamic trend in Model.TrendResults)
 {
-    <section id="@trend.Key.ToString().Replace(" ", "")" class="section">
+    <section id="@trend.Key.LinkedName" class="section">
                 
         <div class="container">
 
             <div class="row">
 
                 <div class="col-md-12 headline wow bounceInLeft">
-                    <h2>@trend.Key</h2>
+                    <h2>@trend.Key.Name</h2>
                 </div>
 
             </div><!-- .row -->
