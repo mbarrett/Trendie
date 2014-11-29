@@ -37,7 +37,8 @@ namespace Trendie.Core.Builders
 
             return new ViewModel
                 {
-                    Country = country.ToFullname(),
+                    Country = country,
+                    CountryName = country.ToFullname(),
                     TrendResults = trendResults
                 };
         }

@@ -28,9 +28,15 @@ namespace Trendie.UnitTests.Builders
             }
 
             [Test]
-            public void should_return_the_country_fullname()
+            public void should_return_the_country()
             {
-                Assert.That(_outcome.Country, Is.EqualTo(_country.ToFullname()));
+                Assert.That(_outcome.Country, Is.EqualTo(_country));
+            }
+            
+            [Test]
+            public void should_return_the_country_name()
+            {
+                Assert.That(_outcome.CountryName, Is.EqualTo(_country.ToFullname()));
             }
             
             [Test]

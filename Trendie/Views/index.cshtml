@@ -16,9 +16,10 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="aus">Australia</a>
-            <a class="navbar-brand" href="uk">United Kingdom</a>
-            <a class="navbar-brand" href="us">United States</a>
+
+            <a class="navbar-brand  @(Model.Country == "aus" ? "active" : "")" href="aus">Australia</a>
+            <a class="navbar-brand @(Model.Country == "uk" ? "active" : "")" href="uk">United Kingdom</a>
+            <a class="navbar-brand @(Model.Country == "us" ? "active" : "")" href="us">United States</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -47,7 +48,7 @@
 
                 <div class="hello wow bounceInDown">
                     <h1>Hello, this is trendie</h1>
-                    <h3><span class="rotate">Top 5 trends for @Model.Country. | Scroll down. | Find trends.</span></h3>
+                    <h3><span class="rotate">Top 5 trends for @Model.CountryName. | Scroll down. | Find trends.</span></h3>
                 </div>
             </div>
         </div><!-- .row -->
