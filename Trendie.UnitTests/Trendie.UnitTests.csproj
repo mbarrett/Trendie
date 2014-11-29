@@ -57,7 +57,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Builders\ViewModelBuilderTests.cs" />
+    <Compile Include="Mappers\TrendMapperTests.cs" />
+    <Compile Include="Mappers\TweetMapperTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\TwitterRepositoryTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

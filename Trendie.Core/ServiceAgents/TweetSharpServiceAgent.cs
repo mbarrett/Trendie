@@ -1,21 +1,25 @@
-﻿using TweetSharp;
+﻿using System.Configuration;
+using TweetSharp;
 
 namespace Trendie.Core.ServiceAgents
 {
     public class TweetSharpServiceAgent : ITweetSharpServiceAgent
     {
-        private const string ConsumerKey = "StNb9l4CwGevdEEOfBa8Qwcjc";
-        private const string ConsumerSecret = "A9GjWy3paA48AQo2UBwBppsv6uX3iCWdSuu5RDgHX7TNaZu4fx";
-        private const string TokenKey = "1591448186-jImYcBViaQGNZt8PnFujNAOu0DPTTjfXnHjNXiY";
-        private const string TokenSecret = "v33sJs5lxWcsxzW1PlWLh7yMrjEXGo3IUhdMjTlDFg6Nn";
+        private readonly ITwitterService _twitterService;
 
-        private readonly TwitterService _service = new TwitterService(ConsumerKey, ConsumerSecret);
+        public TweetSharpServiceAgent()
+        {
+            var consumerKey = ConfigurationManager.AppSettings["ConsumerKey"];
+            var consumerSecret = ConfigurationManager.AppSettings["ConsumerSecret"];
+
+            _twitterService = new TwitterService(consumerKey, consumerSecret);
+        }
 
         public TwitterTrends ListLocalTrendsFor(int id)
         {
             Authenticate();
 
-            return _service.ListLocalTrendsFor(new ListLocalTrendsForOptions
+            return _twitterService.ListLocalTrendsFor(new ListLocalTrendsForOptions
                 {
                     Id = id
                 });
@@ -25,7 +29,7 @@ namespace Trendie.Core.ServiceAgents
         {
             Authenticate();
 
-            return _service.Search(new SearchOptions
+            return _twitterService.Search(new SearchOptions
                 {
                     Resulttype = TwitterSearchResultType.Recent,
                     Q = query,
@@ -36,7 +40,10 @@ namespace Trendie.Core.ServiceAgents
 
         private void Authenticate()
         {
-            _service.AuthenticateWith(TokenKey, TokenSecret);
+            var tokenKey = ConfigurationManager.AppSettings["TokenKey"];
+            var tokenSecret = ConfigurationManager.AppSettings["TokenSecret"];
+
+            _twitterService.AuthenticateWith(tokenKey, tokenSecret);
         }
     }
 }

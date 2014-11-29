@@ -11,7 +11,7 @@ namespace Trendie.Core.Mappers
             return new Trend
                 {
                     Name = trend.Name,
-                    LinkedName = trend.Name.ToSafeString()
+                    Href = trend.Name.ToHref()
                 };
         }
     }

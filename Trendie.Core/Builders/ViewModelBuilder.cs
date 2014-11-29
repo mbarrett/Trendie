@@ -32,7 +32,7 @@ namespace Trendie.Core.Builders
                 var top10Tweets = _twitterRepository.GetTweetsFor(trend);
 
                 trendResults.Add(_trendMapper.Map(trend),
-                                 _tweetMapper.Map(top10Tweets));
+                                 _tweetMapper.Map(top10Tweets).ToList());
             }
 
             return new ViewModel

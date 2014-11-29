@@ -25,7 +25,7 @@
             <ul class="nav navbar-nav navbar-right">
                 @foreach (dynamic trend in Model.TrendResults)
                 {
-                    <li><a href="#@trend.Key.LinkedName">@trend.Key.Name</a></li>
+                    <li><a href="#@trend.Key.Href">@trend.Key.Name</a></li>
                 }
             </ul>
         </div>
@@ -60,7 +60,7 @@
         
 @foreach (dynamic trend in Model.TrendResults)
 {
-    <section id="@trend.Key.LinkedName" class="section">
+    <section id="@trend.Key.Href" class="section">
                 
         <div class="container">
 

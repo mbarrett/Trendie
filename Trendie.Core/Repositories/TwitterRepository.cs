@@ -22,10 +22,13 @@ namespace Trendie.Core.Repositories
 
         public TwitterTrends GetTopTrendsFor(string country)
         {
-            var cacheKey = string.Format("trends_{0}", country.ToId());
-            return _webCache.Get(cacheKey,
+            var countryId = country.ToId();
+            var cacheKey = string.Format("trends_{0}", countryId);
+
+            var test= _webCache.Get(cacheKey,
                                  () =>
-                                 _tweetSharpServiceAgent.ListLocalTrendsFor(country.ToId()), CacheExpiry15Minutes);
+                                 _tweetSharpServiceAgent.ListLocalTrendsFor(countryId), CacheExpiry15Minutes);
+            return test;
         }
 
         public TwitterSearchResult GetTweetsFor(TwitterTrend trend)

@@ -3,6 +3,6 @@
     public class Trend
     {
         public string Name { get; set; }
-        public string LinkedName { get; set; }
+        public string Href { get; set; }
     }
 }

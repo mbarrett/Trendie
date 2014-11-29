@@ -6,6 +6,6 @@ namespace Trendie.Core.Mappers
 {
     public interface ITweetMapper
     {
-        List<Tweet> Map(TwitterSearchResult tweets);
+        IEnumerable<Tweet> Map(TwitterSearchResult tweets);
     }
 }
