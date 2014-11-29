@@ -462,6 +462,10 @@ h3 > .fa {
 	border-bottom: 3px solid #FFF;
 }
 
+.navbar-color .navbar-brand.active {
+    border-bottom: 3px solid #222;
+}
+
 .navbar-custom .navbar-nav > li.active {
 	border-bottom: 3px solid #FFF;
 }

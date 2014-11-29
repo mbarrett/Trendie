@@ -25,10 +25,9 @@ namespace Trendie.Core.Repositories
             var countryId = country.ToId();
             var cacheKey = string.Format("trends_{0}", countryId);
 
-            var test= _webCache.Get(cacheKey,
+            return _webCache.Get(cacheKey,
                                  () =>
                                  _tweetSharpServiceAgent.ListLocalTrendsFor(countryId), CacheExpiry15Minutes);
-            return test;
         }
 
         public TwitterSearchResult GetTweetsFor(TwitterTrend trend)
