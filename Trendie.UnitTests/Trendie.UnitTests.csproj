@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{85000D50-C722-4924-9DCD-04F1CE1F56EB}</ProjectGuid>
+    <ProjectGuid>{04D41203-C790-4E4E-B580-5A95FDC81BA5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Trendie.Core</RootNamespace>
-    <AssemblyName>Trendie.Core</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RootNamespace>Trendie.UnitTests</RootNamespace>
+    <AssemblyName>Trendie.UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
@@ -32,62 +32,41 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EasyHttp">
-      <HintPath>..\packages\EasyHttp.1.6.69.0\lib\net40\EasyHttp.dll</HintPath>
-    </Reference>
     <Reference Include="Hammock">
       <HintPath>..\packages\TweetSharp-Unofficial.2.3.1.2\lib\4.0\Hammock.dll</HintPath>
     </Reference>
-    <Reference Include="Hammock.ClientProfile">
-      <HintPath>..\packages\TweetSharp.2.3.1\lib\4.0\Hammock.ClientProfile.dll</HintPath>
-    </Reference>
-    <Reference Include="JsonFx">
-      <HintPath>..\packages\JsonFx.2.0.1209.2802\lib\net40\JsonFx.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\TweetSharp-Unofficial.2.3.1.2\lib\4.0\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="NSubstitute">
+      <HintPath>..\packages\NSubstitute.1.8.0.0\lib\net45\NSubstitute.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="TweetSharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c148cfba29ed1a4d, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="TweetSharp">
       <HintPath>..\packages\TweetSharp-Unofficial.2.3.1.2\lib\4.0\TweetSharp.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Builders\IViewModelBuilder.cs" />
-    <Compile Include="Builders\ViewModelBuilder.cs" />
-    <Compile Include="Cache\HttpRuntimeCacheWrapper.cs" />
-    <Compile Include="Cache\IHttpRuntimeCacheWrapper.cs" />
-    <Compile Include="Cache\IWebCache.cs" />
-    <Compile Include="Cache\WebCache.cs" />
-    <Compile Include="Extensions\CountryExtensions.cs" />
-    <Compile Include="Extensions\TweetExtensions.cs" />
-    <Compile Include="Mappers\ITweetMapper.cs" />
-    <Compile Include="Mappers\ITrendMapper.cs" />
-    <Compile Include="Mappers\TweetMapper.cs" />
-    <Compile Include="Mappers\TrendMapper.cs" />
-    <Compile Include="Models\Trend.cs" />
-    <Compile Include="Models\Tweet.cs" />
-    <Compile Include="Models\ViewModel.cs" />
+    <Compile Include="Builders\ViewModelBuilderTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\ITwitterRepository.cs" />
-    <Compile Include="Repositories\TwitterRepository.cs" />
-    <Compile Include="ServiceAgents\ITweetSharpServiceAgent.cs" />
-    <Compile Include="ServiceAgents\TweetSharpServiceAgent.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Trendie.Core\Trendie.Core.csproj">
+      <Project>{85000D50-C722-4924-9DCD-04F1CE1F56EB}</Project>
+      <Name>Trendie.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

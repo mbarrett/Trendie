@@ -5,6 +5,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trendie", "Trendie\Trendie.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trendie.Core", "Trendie.Core\Trendie.Core.csproj", "{85000D50-C722-4924-9DCD-04F1CE1F56EB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trendie.UnitTests", "Trendie.UnitTests\Trendie.UnitTests.csproj", "{04D41203-C790-4E4E-B580-5A95FDC81BA5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{7F0C41F7-6DF1-4DEA-B621-A0922299E010}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +28,10 @@ Global
 		{85000D50-C722-4924-9DCD-04F1CE1F56EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85000D50-C722-4924-9DCD-04F1CE1F56EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85000D50-C722-4924-9DCD-04F1CE1F56EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04D41203-C790-4E4E-B580-5A95FDC81BA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04D41203-C790-4E4E-B580-5A95FDC81BA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04D41203-C790-4E4E-B580-5A95FDC81BA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04D41203-C790-4E4E-B580-5A95FDC81BA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

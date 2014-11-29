@@ -2,7 +2,7 @@
 
 namespace Trendie.Core.Models
 {
-    public class TweetResult
+    public class Tweet
     {
         public string Status { get; set; }
         public string Author { get; set; }
