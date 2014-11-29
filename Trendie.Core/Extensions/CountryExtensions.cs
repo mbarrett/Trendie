@@ -1,4 +1,6 @@
-﻿namespace Trendie.Core.Extensions
+﻿using System;
+
+namespace Trendie.Core.Extensions
 {
     public static class CountryExtensions
     {
@@ -10,8 +12,10 @@
                     return "United Kingdom";
                 case "us":
                     return "United States";
-                default:
+                case "aus":
                     return "Australia";
+                default:
+                    throw new Exception(string.Format("Country name not found for '{0}'", country));
             }
         }
 
@@ -23,8 +27,10 @@
                     return 23424975;
                 case "us":
                     return 23424977;
-                default:
+                case "aus":
                     return 23424748;
+                default:
+                    throw new Exception(string.Format("Country id not found for '{0}'", country));
             }
         }
     }

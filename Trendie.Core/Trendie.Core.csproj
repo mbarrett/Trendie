@@ -70,7 +70,7 @@
     <Compile Include="Cache\IWebCache.cs" />
     <Compile Include="Cache\WebCache.cs" />
     <Compile Include="Extensions\CountryExtensions.cs" />
-    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\HrefExtensions.cs" />
     <Compile Include="Mappers\ITweetMapper.cs" />
     <Compile Include="Mappers\ITrendMapper.cs" />
     <Compile Include="Mappers\TweetMapper.cs" />

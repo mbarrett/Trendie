@@ -1,4 +1,5 @@
-﻿using Nancy;
+﻿using System;
+using Nancy;
 using Trendie.Core.Builders;
 
 namespace Trendie.Modules
@@ -15,8 +16,16 @@ namespace Trendie.Modules
 
             Get["/{country}"] = render =>
             {
-                var viewModel = _viewModelBuilder.Build(render.country);
-                return View["index", viewModel];
+                try
+                {
+                    var viewModel = _viewModelBuilder.Build(render.country);
+                    return View["index", viewModel];
+                }
+                catch (Exception)
+                {
+                    return View["error"];
+                }
+
             };
         }
     }

@@ -119,6 +119,7 @@
     <Content Include="Content\assets\fonts\fontawesome-webfont.woff" />
     <Content Include="Content\assets\fonts\FontAwesome.otf" />
     <Content Include="Views\master.cshtml" />
+    <Content Include="Views\error.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

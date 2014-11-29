@@ -57,6 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Builders\ViewModelBuilderTests.cs" />
+    <Compile Include="Cache\WebCacheTests.cs" />
+    <Compile Include="Extensions\CountryExtensions\ToIdTests.cs" />
+    <Compile Include="Extensions\CountryExtensions\ToFullnameTests.cs" />
     <Compile Include="Mappers\TrendMapperTests.cs" />
     <Compile Include="Mappers\TweetMapperTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
