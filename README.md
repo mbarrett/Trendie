@@ -9,7 +9,7 @@ Frontend theme via <a href="http://getbootstrap.com/">Bootstrap</a>.
 
 Deployment shout to <a href="https://appharbor.com/">AppHarbor</a>.
 
-The site is hosted here with Pingdom alerts setup to monitor downtime:
+The site is hosted with AppHarbor and Pingdom alerts setup to monitor uptime:
 
 <a href="http://trendie.apphb.com">http://trendie.apphb.com</a>
 
