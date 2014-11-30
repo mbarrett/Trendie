@@ -77,6 +77,7 @@
     <Content Include="Content\assets\css\style.css" />
     <Content Include="Content\assets\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\assets\images\488.GIF" />
+    <Content Include="Content\assets\images\aus.jpg" />
     <Content Include="Content\assets\images\bg4.jpeg" />
     <Content Include="Content\assets\images\bg4.jpg" />
     <Content Include="Content\assets\images\grabbing.png" />
@@ -87,10 +88,11 @@
     <Content Include="Content\assets\images\p6.jpg" />
     <Content Include="Content\assets\images\p8.jpg" />
     <Content Include="Content\assets\images\photo.jpg" />
+    <Content Include="Content\assets\images\uk.jpg" />
+    <Content Include="Content\assets\images\us.jpg" />
     <Content Include="Content\assets\js\custom.effects.js" />
     <Content Include="Content\assets\js\custom.wow.js" />
     <Content Include="Content\assets\js\custom.preloader.js" />
-    <Content Include="Content\assets\js\custom.js" />
     <Content Include="Content\assets\js\jquery-1.11.0.js" />
     <Content Include="Content\assets\js\jquery-1.11.0.min.js" />
     <Content Include="Content\assets\js\jquery.backstretch.js" />
