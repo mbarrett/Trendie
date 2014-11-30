@@ -12,7 +12,7 @@ namespace Trendie.Modules
         {
             _viewModelBuilder = viewModelBuilder;
 
-            Get["/"] = render => Response.AsRedirect("/uk");
+            Get["/"] = render => Response.AsRedirect("/aus");
 
             Get["/{country}"] = render =>
             {

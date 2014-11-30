@@ -70,11 +70,16 @@
     <script src="content/assets/js/jquery.simple-text-rotator.min.js"></script>
 	<script src="content/assets/js/wow.min.js"></script>
 	<script src="content/assets/js/smoothscroll.js"></script>
-	<script src="content/assets/js/custom.js"></script>
+
+	<script src="content/assets/js/custom.effects.js"></script>
     <script src="content/assets/js/custom.preloader.js"></script>
+    <script src="content/assets/js/custom.wow.js"></script>
     
     <script type="text/javascript">
         TRENDIE.CUSTOM.PreLoader.init();
+        TRENDIE.CUSTOM.Effects.init({
+            Country: '@Model.Country'
+        });
     </script>
 
 </body>

@@ -87,6 +87,8 @@
     <Content Include="Content\assets\images\p6.jpg" />
     <Content Include="Content\assets\images\p8.jpg" />
     <Content Include="Content\assets\images\photo.jpg" />
+    <Content Include="Content\assets\js\custom.effects.js" />
+    <Content Include="Content\assets\js\custom.wow.js" />
     <Content Include="Content\assets\js\custom.preloader.js" />
     <Content Include="Content\assets\js\custom.js" />
     <Content Include="Content\assets\js\jquery-1.11.0.js" />
