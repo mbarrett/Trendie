@@ -24,7 +24,7 @@ namespace Trendie.Modules
                 }
                 catch (Exception)
                 {
-                    return View["error", new ViewModel { Country = render.country }];
+                    return View["error"];
                 }
 
             };
