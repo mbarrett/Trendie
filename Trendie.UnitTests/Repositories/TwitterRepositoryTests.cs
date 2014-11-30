@@ -43,7 +43,7 @@ namespace Trendie.UnitTests.Repositories
                 given_a_trend();
                 given_cached_tweet_search_results();
 
-                _outcome = _subject.GetTweetsFor(_trend);
+                _outcome = _subject.GetTweetsFor(_trend, _country);
             }
 
             [Test]
@@ -84,13 +84,13 @@ namespace Trendie.UnitTests.Repositories
             _cachedTwitterTrends = new TwitterTrends {RawSource = "trendshere"};
 
             _webCache.Get(cacheKey,
-                          Arg.Any<Func<TwitterTrends>>(), 15)
+                          Arg.Any<Func<TwitterTrends>>(), 5)
                      .Returns(_cachedTwitterTrends);
         }
 
         protected void given_cached_tweet_search_results()
         {
-            var cacheKey = string.Format("tweets_{0}", _trend.Query);
+            var cacheKey = string.Format("tweets_{0}_{1}", _trend.Query, _country);
             _cachedTweetSearchResults = new TwitterSearchResult {RawSource = "tweetshere"};
 
             _webCache.Get(cacheKey,

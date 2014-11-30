@@ -5,6 +5,6 @@ namespace Trendie.Core.ServiceAgents
     public interface ITweetSharpServiceAgent
     {
         TwitterTrends ListLocalTrendsFor(int Id);
-        TwitterSearchResult Search(string query);
+        TwitterSearchResult Search(string query, string country);
     }
 }

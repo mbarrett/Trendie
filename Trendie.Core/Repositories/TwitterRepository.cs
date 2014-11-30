@@ -8,7 +8,6 @@ namespace Trendie.Core.Repositories
     public class TwitterRepository : ITwitterRepository
     {
         public const int CacheExpiry5Minutes = 5;
-        public const int CacheExpiry15Minutes = 15;
 
         private readonly IWebCache _webCache;
         private readonly ITweetSharpServiceAgent _tweetSharpServiceAgent;
@@ -27,15 +26,15 @@ namespace Trendie.Core.Repositories
 
             return _webCache.Get(cacheKey,
                                  () =>
-                                 _tweetSharpServiceAgent.ListLocalTrendsFor(countryId), CacheExpiry15Minutes);
+                                 _tweetSharpServiceAgent.ListLocalTrendsFor(countryId), CacheExpiry5Minutes);
         }
 
-        public TwitterSearchResult GetTweetsFor(TwitterTrend trend)
+        public TwitterSearchResult GetTweetsFor(TwitterTrend trend, string country)
         {
-            var cacheKey = string.Format("tweets_{0}", trend.Query);
+            var cacheKey = string.Format("tweets_{0}_{1}", trend.Query, country);
             return _webCache.Get(cacheKey, 
                                     () =>
-                                    _tweetSharpServiceAgent.Search(trend.Query), CacheExpiry5Minutes);
+                                    _tweetSharpServiceAgent.Search(trend.Query, country), CacheExpiry5Minutes);
         }
     }
 }

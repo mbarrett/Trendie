@@ -29,7 +29,7 @@ namespace Trendie.Core.Builders
 
             foreach (var trend in top5Trends)
             {
-                var top10Tweets = _twitterRepository.GetTweetsFor(trend);
+                var top10Tweets = _twitterRepository.GetTweetsFor(trend, country);
 
                 trendResults.Add(_trendMapper.Map(trend),
                                  _tweetMapper.Map(top10Tweets).ToList());

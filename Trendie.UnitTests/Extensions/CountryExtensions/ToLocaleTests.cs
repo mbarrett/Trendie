@@ -1,64 +1,63 @@
 ﻿using System;
 using NUnit.Framework;
-using Trendie.Core.Extensions;
 
 namespace Trendie.UnitTests.Extensions.CountryExtensions
 {
-    public class ToFullnameTests
+    public class ToLocaleTests
     {
         [TestFixture]
-        public class when_transforming_country_to_fullname_and_country_is_uk : given_a_country_for_fullname
+        public class when_transforming_country_to_locale_and_country_is_uk : given_a_country_for_locale
         {
             [SetUp]
             public void Setup()
             {
                 _country = "uk";
-                _outcome = _country.ToFullname();
+                _outcome = Core.Extensions.CountryExtensions.ToLocale(_country);
             }
 
             [Test]
-            public void should_return_united_kingdom()
+            public void should_return_uk()
             {
-                Assert.That(_outcome, Is.EqualTo("United Kingdom"));
+                Assert.That(_outcome, Is.EqualTo("uk"));
             }
         }
 
         [TestFixture]
-        public class when_transforming_country_to_fullname_and_country_is_us : given_a_country_for_fullname
+        public class when_transforming_country_to_locale_and_country_is_us : given_a_country_for_locale
         {
             [SetUp]
             public void Setup()
             {
                 _country = "us";
-                _outcome = _country.ToFullname();
+                _outcome = Core.Extensions.CountryExtensions.ToLocale(_country);
             }
 
             [Test]
-            public void should_return_united_states()
+            public void should_return_us()
             {
-                Assert.That(_outcome, Is.EqualTo("United States"));
+                Assert.That(_outcome, Is.EqualTo("us"));
             }
         }
 
         [TestFixture]
-        public class when_transforming_country_to_fullname_and_country_is_aus : given_a_country_for_fullname
+        public class when_transforming_country_to_locale_and_country_is_aus : given_a_country_for_locale
         {
             [SetUp]
             public void Setup()
             {
                 _country = "aus";
-                _outcome = _country.ToFullname();
+                _outcome = Core.Extensions.CountryExtensions.ToLocale(_country);
             }
 
             [Test]
-            public void should_return_australia()
+            public void should_return_au()
             {
-                Assert.That(_outcome, Is.EqualTo("Australia"));
+                Assert.That(_outcome, Is.EqualTo("au"));
             }
         }
 
         [TestFixture]
-        public class when_transforming_country_to_fullname_and_country_is_not_recognised : given_a_country_for_fullname
+        public class when_transforming_country_to_locale_and_country_is_not_recognised : given_a_country_for_locale
         {
             private Exception _exception;
 
@@ -69,7 +68,7 @@ namespace Trendie.UnitTests.Extensions.CountryExtensions
 
                 try
                 {
-                    _outcome = _country.ToFullname();
+                    _outcome = Core.Extensions.CountryExtensions.ToLocale(_country);
                 }
                 catch (Exception ex)
                 {
@@ -80,12 +79,12 @@ namespace Trendie.UnitTests.Extensions.CountryExtensions
             [Test]
             public void should_throw_exception()
             {
-                Assert.That(_exception.Message, Is.EqualTo(string.Format("Country name not found for '{0}'", _country)));
+                Assert.That(_exception.Message, Is.EqualTo(string.Format("Country locale not found for '{0}'", (object) _country)));
             }
         } 
     }
 
-    public class given_a_country_for_fullname
+    public class given_a_country_for_locale
     {
         protected string _country;
         protected string _outcome;

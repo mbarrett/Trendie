@@ -1,4 +1,5 @@
 ﻿using System.Configuration;
+using Trendie.Core.Extensions;
 using TweetSharp;
 
 namespace Trendie.Core.ServiceAgents
@@ -25,7 +26,7 @@ namespace Trendie.Core.ServiceAgents
                 });
         }
 
-        public TwitterSearchResult Search(string query)
+        public TwitterSearchResult Search(string query, string country)
         {
             Authenticate();
 
@@ -34,7 +35,8 @@ namespace Trendie.Core.ServiceAgents
                     Resulttype = TwitterSearchResultType.Recent,
                     Q = query,
                     Count = 10,
-                    IncludeEntities = false
+                    IncludeEntities = false,
+                    Locale = country.ToLocale()
                 });
         }
 

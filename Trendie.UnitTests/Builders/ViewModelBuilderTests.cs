@@ -88,7 +88,7 @@ namespace Trendie.UnitTests.Builders
         protected void given_top_ten_tweets_for_trend()
         {
             _topTenTweets = new TwitterSearchResult();
-            _twitterRepository.GetTweetsFor(Arg.Any<TwitterTrend>()).Returns(_topTenTweets);
+            _twitterRepository.GetTweetsFor(Arg.Any<TwitterTrend>(), _country).Returns(_topTenTweets);
         }
 
         protected void given_mapped_trend()

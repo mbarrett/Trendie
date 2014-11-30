@@ -33,7 +33,7 @@ namespace Trendie.UnitTests.Extensions.CountryExtensions
             }
 
             [Test]
-            public void should_return_united_states()
+            public void should_return_23424977()
             {
                 Assert.That(_outcome, Is.EqualTo(23424977));
             }
@@ -57,7 +57,7 @@ namespace Trendie.UnitTests.Extensions.CountryExtensions
         }
 
         [TestFixture]
-        public class when_transforming_country_to_id_and_country_is_not_recongised : given_a_country_for_id
+        public class when_transforming_country_to_id_and_country_is_not_recognised : given_a_country_for_id
         {
             private Exception _exception;
 

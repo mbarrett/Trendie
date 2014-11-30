@@ -33,5 +33,20 @@ namespace Trendie.Core.Extensions
                     throw new Exception(string.Format("Country id not found for '{0}'", country));
             }
         }
+
+        public static string ToLocale(this string country)
+        {
+            switch (country.ToLower())
+            {
+                case "uk":
+                    return "uk";
+                case "us":
+                    return "us";
+                case "aus":
+                    return "au";
+                default:
+                    throw new Exception(string.Format("Country locale not found for '{0}'", country));
+            }
+        }
     }
 }
