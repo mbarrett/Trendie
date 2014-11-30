@@ -78,16 +78,7 @@
     <Content Include="Content\assets\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\assets\images\488.GIF" />
     <Content Include="Content\assets\images\aus.jpg" />
-    <Content Include="Content\assets\images\bg4.jpeg" />
-    <Content Include="Content\assets\images\bg4.jpg" />
-    <Content Include="Content\assets\images\grabbing.png" />
-    <Content Include="Content\assets\images\p1.jpg" />
-    <Content Include="Content\assets\images\p2.jpg" />
-    <Content Include="Content\assets\images\p3.jpg" />
-    <Content Include="Content\assets\images\p5.jpg" />
-    <Content Include="Content\assets\images\p6.jpg" />
-    <Content Include="Content\assets\images\p8.jpg" />
-    <Content Include="Content\assets\images\photo.jpg" />
+    <Content Include="Content\assets\images\default.jpg" />
     <Content Include="Content\assets\images\uk.jpg" />
     <Content Include="Content\assets\images\us.jpg" />
     <Content Include="Content\assets\js\custom.effects.js" />

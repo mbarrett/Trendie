@@ -66,7 +66,7 @@ window.TRENDIE.CUSTOM.Effects = function () {
             args = args || {};
             Country = args.Country || 'default';
 
-            $(window).ready(function () {
+            $(document).ready(function () {
                 configureNavBarLinks();
                 configureNavBarStyles();
                 configureHeroImage();

@@ -1,6 +1,7 @@
 ﻿using System;
 using Nancy;
 using Trendie.Core.Builders;
+using Trendie.Core.Models;
 
 namespace Trendie.Modules
 {
@@ -23,7 +24,7 @@ namespace Trendie.Modules
                 }
                 catch (Exception)
                 {
-                    return View["error"];
+                    return View["error", new ViewModel { Country = render.country }];
                 }
 
             };
